@@ -7,7 +7,7 @@
 <style>
   main {
     position: relative;
-    margin: var(--metric-medium) auto;
+    padding: 0 160px;
   }
 </style>
 

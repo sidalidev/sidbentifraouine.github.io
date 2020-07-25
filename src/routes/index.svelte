@@ -1,46 +1,36 @@
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 124px 0;
+  }
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+  .hero .greeting {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  .hero .greeting img {
+    height: 160px;
+    align-self: flex-end;
+  }
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Sid 👨‍🎨</title>
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<section class="hero">
+  <img alt="Sid coding" src="typing illus.png" />
+  <div class="greeting">
+    <div class="text">
+      <h1>Hi, I’m Sid</h1>
+      <h3>A Fullstack JavaScript Engineer</h3>
+    </div>
+    <img alt="Flower pot" src="flowers.png" />
+  </div>
+</section>

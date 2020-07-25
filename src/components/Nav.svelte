@@ -4,11 +4,13 @@
 
 <style>
   nav {
-    padding: 1em;
+    padding: 16px 160px;
+    display: flex;
+    align-items: center;
   }
 
   .logo {
-    height: 2em;
+    height: 48px;
   }
 
   /* ul {
