@@ -1,13 +1,13 @@
 <style>
   .separator {
-    width: 240px;
+    width: 300px;
     align-self: center;
+    margin: 120px;
   }
   .hero {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 124px 0;
   }
 
   .hero .greeting {
@@ -25,7 +25,7 @@
 
   /* Skills */
   section .title {
-    margin: 32px 0;
+    margin: 0 0 32px;
   }
 
   .skill-list {
@@ -35,7 +35,7 @@
 
   .skill-card {
     height: 300px;
-    width: 250px;
+    width: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +49,17 @@
   }
   .skill-card img {
     height: 80%;
+  }
+
+  /* Tools */
+  .tool-list img {
+    height: 40px;
+  }
+
+  .tool-list .row {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
   }
 </style>
 
@@ -67,7 +78,7 @@
   </div>
 </section>
 
-<img class="separator" src="skills_separator.png" alt="Horizontal separator" />
+<img class="separator" src="hr_skills.png" alt="Horizontal separator" />
 
 <section>
   <h3 class="title">I know to</h3>
@@ -83,6 +94,28 @@
     <div class="skill-card">
       <img src="mobiledev.png" alt="UX UI Design" />
       <h4>Mobile Dev</h4>
+    </div>
+  </div>
+</section>
+
+<img class="separator" src="hr_tools.png" alt="Horizontal separator" />
+
+<section>
+  <h3 class="title">My tools</h3>
+  <div class="tool-list">
+    <div class="row">
+      <img src="tools/figma.png" alt="figma" />
+      <img src="tools/react.png" alt="react" />
+      <img src="tools/gatsby.png" alt="gatsby" />
+      <img src="tools/next.png" alt="next" />
+      <img src="tools/flutter.png" alt="flutter" />
+      <img src="tools/svelte.png" alt="svelte" />
+    </div>
+    <div class="row">
+      <img src="tools/node.png" alt="node" />
+      <img src="tools/express.png" alt="express" />
+      <img src="tools/apollo.png" alt="apollo" />
+      <img src="tools/prisma.png" alt="prisma" />
     </div>
   </div>
 </section>
