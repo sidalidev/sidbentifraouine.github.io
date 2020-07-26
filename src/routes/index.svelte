@@ -59,7 +59,29 @@
   .tool-list .row {
     margin: 40px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+  }
+
+  /* Job */
+  .job {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .job.inverted {
+    flex-direction: row-reverse;
+  }
+  .job img {
+    width: 40%;
+  }
+
+  .job .description {
+    width: 50%;
+  }
+  .job .description h4 span {
+    font-size: 0.7em;
+    color: var(--color-primary);
   }
 </style>
 
@@ -118,4 +140,53 @@
       <img src="tools/prisma.png" alt="prisma" />
     </div>
   </div>
+</section>
+
+<img class="separator" src="hr_job.png" alt="Horizontal separator" />
+
+<section>
+  <h3 class="title">My current job</h3>
+  <div class="job">
+    <img src="images/jobs/ector.png" alt="Ector" />
+    <div class="description">
+      <h4>
+        <span>Fullstack Engineer at</span>
+        ECTOR
+      </h4>
+      <p>
+        Ector is the valet parking service at train stations and airports that
+        parks your car for you. It makes you save time and save up to 50% on
+        parking !
+      </p>
+      <p>
+        I’m working with an awesome team on the developping the solutions for
+        Web with Gatsby, Mobile with React Native to make the service fit the
+        needs of our beloved customers.
+      </p>
+    </div>
+  </div>
+
+  <div class="job inverted">
+    <img src="images/jobs/uphf.png" alt="UPHF" />
+    <div class="description">
+      <h4>
+        <span>Teacher at</span>
+        UPHF
+      </h4>
+      <p>
+        Université Polytechnique Hauts-de-France is also the university where I
+        studied and got my Master Degree in Computer Science.
+      </p>
+      <p>
+        When I was a student, I loved how some teachers made me love a specific
+        subject. Inspired by them, I wanted to do the same thing and try my best
+        to share what know.
+      </p>
+      <p>
+        Today, I teach Master 2 students how to make Cross Platform Mobile Apps
+        with React Native, Flutter and Ionic.
+      </p>
+    </div>
+  </div>
+
 </section>
