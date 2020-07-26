@@ -8,12 +8,12 @@
   --metric-medium: 24px;
   --metric-large: 48px;
 
-  --font-h1: 95.95px;
-  --font-h2: 59.3px;
-  --font-h3: 36.65px;
-  --font-h4: 22.65px;
-  --font-paragraph: 14px;
-  --font-small: 8.65px;
+  --font-h1: 64px;
+  --font-h2: 40px;
+  --font-h3: 32px;
+  --font-h4: 24px;
+  --font-paragraph: 16px;
+  --font-small: 8px;
 }
 
 @font-face {
