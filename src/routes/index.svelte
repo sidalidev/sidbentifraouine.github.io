@@ -83,6 +83,44 @@
     font-size: 0.7em;
     color: var(--color-primary);
   }
+
+  /* Contact */
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact > a {
+    padding: 16px 32px;
+    /* background-color: var(--color-secondary); */
+    text-decoration: none;
+    color: var(--color-primary);
+    /* border-radius: 8px; */
+    align-self: center;
+    border: 4px solid var(--color-primary);
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius: 15px 255px;
+  }
+
+  .social-links {
+    margin: 32px 0;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-links a {
+    text-decoration: none;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-links a img {
+    height: 32px;
+  }
 </style>
 
 <svelte:head>
@@ -191,6 +229,7 @@
 </section>
 
 <img class="separator" src="hr_job.png" alt="Horizontal separator" />
+
 <section>
   <h3 class="title">More about me</h3>
   <div class="job">
@@ -226,5 +265,30 @@
       </p>
       <p>Everything that I don’t know yet attracts me…</p>
     </div>
+  </div>
+</section>
+
+<img class="separator" src="hr_job.png" alt="Horizontal separator" />
+
+<section class="contact">
+  <a href="mailto:sidbentifraouine@gmail.com?subject=Hi there 🖖!">
+    Let's get in touch
+  </a>
+  <div class="social-links">
+    <a
+      rel="external"
+      target="_blank"
+      href="https://www.linkedin.com/in/sidbentifraouine/">
+      <img src="images/contact/linkedin.svg" alt="LinkedIn logo" />
+    </a>
+    <a
+      rel="external"
+      target="_blank"
+      href="https://github.com/sidbentifraouine">
+      <img src="images/contact/github.svg" alt="Github logo" />
+    </a>
+    <a rel="external" target="_blank" href="https://twitter.com/sbentifraouine">
+      <img src="images/contact/twitter.svg" alt="Twitter logo" />
+    </a>
   </div>
 </section>
