@@ -52,7 +52,10 @@
 </style>
 
 <nav>
-  <img class="logo" src="logo.png" alt="Sid" />
+  <img
+    class="logo"
+    src="images/logo.svg"
+    alt="Logo, handwritten Sid with a hat above the S" />
   <!-- <ul>
     <li>
       <a aria-current={segment === undefined ? 'page' : undefined} href=".">
