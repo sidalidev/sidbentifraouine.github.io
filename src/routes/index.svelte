@@ -188,5 +188,43 @@
       </p>
     </div>
   </div>
+</section>
 
+<img class="separator" src="hr_job.png" alt="Horizontal separator" />
+<section>
+  <h3 class="title">More about me</h3>
+  <div class="job">
+    <img
+      src="images/about/sport.png"
+      alt="Sketch of a Football ball and Judo belt" />
+    <div class="description">
+      <h4>Sport</h4>
+      <p>
+        Ector is the valet parking service at train stations and airports that
+        parks your car for you. It makes you save time and save up to 50% on
+        parking !
+      </p>
+      <p>
+        I’m working with an awesome team on the developping the solutions for
+        Web with Gatsby, Mobile with React Native to make the service fit the
+        needs of our beloved customers.
+      </p>
+    </div>
+  </div>
+
+  <div class="job inverted">
+    <img src="images/about/pizza.png" alt="Sketch of a Pizza" />
+    <div class="description">
+      <h4>Learning</h4>
+      <p>
+        It can be professional, artistic or sometimes stuff that can appear
+        useless to others… I love learning new things.
+      </p>
+      <p>
+        It can be painting, or how to prepare traditional Napolitan Pizza, or
+        how to speak Italian.
+      </p>
+      <p>Everything that I don’t know yet attracts me…</p>
+    </div>
+  </div>
 </section>
