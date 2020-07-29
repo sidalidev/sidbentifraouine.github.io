@@ -1,8 +1,14 @@
+@import "./normalize.css";
+
 :root {
+  /* Colors as Colors */
+  --color-black: #000000;
+  --color-blackAccent: #20201e;
+  --color-white: #fffefe;
+
+  /* Colors as Intent */
   --color-primary: #20201e;
   --color-secondary: #e7003d;
-  --color-black: #000000;
-  --color-white: #fffefe;
 
   --metric-small: 8px;
   --metric-medium: 24px;
