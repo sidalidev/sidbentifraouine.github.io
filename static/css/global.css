@@ -1,78 +1,81 @@
 @import "./normalize.css";
+@import "./fonts.css";
 
 :root {
-  /* Colors as Colors */
-  --color-black: #000000;
-  --color-blackAccent: #20201e;
-  --color-white: #fffefe;
+  /* Colors */
+  --black: #111;
+  --blackAccent: #20201e;
+  --white: #fffefe;
+  --red: #e7003d;
 
-  /* Colors as Intent */
-  --color-primary: #20201e;
-  --color-secondary: #e7003d;
+  /* Colors intentions */
+  --backgroundColor: var(--white);
 
-  --metric-small: 8px;
-  --metric-medium: 24px;
-  --metric-large: 48px;
+  --textColor: var(--black);
+  --headingColor: var(--blackAccent);
 
-  --font-h1: 64px;
-  --font-h2: 40px;
-  --font-h3: 32px;
-  --font-h4: 24px;
-  --font-paragraph: 16px;
-  --font-small: 8px;
-}
-
-@font-face {
-  font-family: "Mallory";
-  src: url("/Mallory Medium.ttf");
+  /* Typography */
+  --mainTitleFont: MalloryUltra, sans-serif;
+  --headingFont: MalloryMedium, sans-serif;
+  --bodyFont: MalloryBook, sans-serif;
+  --h1: 3.052em;
+  --h2: 2.441em;
+  --h3: 1.953em;
+  --h4: 1.563em;
+  --h5: 1.25em;
+  --smallText: 0.8em;
 }
 
 body {
-  margin: 0;
-  font-family: "Mallory", Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
+  background-color: var(--backgroundColor);
+  font-family: var(--bodyFont);
   font-size: var(--font-paragraph);
-  line-height: 1.5;
-  color: var(--color-black);
-  background-color: var(--color-white);
+  line-height: 1.65;
+  color: var(--textColor);
 }
 
-* {
-  box-sizing: border-box;
+html {
+  font-size: 100%;
+}
+
+p {
+  margin-bottom: 1.15rem;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
+h5 {
+  color: var(--headingColor);
+  margin: 2.75rem 0 1.05rem;
+  font-family: var(--headingFont);
+  line-height: 1.15;
 }
 
 h1 {
-  font-size: var(--font-h1);
+  font-family: var(--mainTitleFont);
+  margin-top: 0;
+  font-size: var(--h1);
 }
 
 h2 {
-  font-size: var(--font-h2);
+  font-size: var(--h2);
 }
 
 h3 {
-  font-size: var(--font-h3);
+  font-size: var(--h3);
 }
 
 h4 {
-  font-size: var(--font-h4);
+  font-size: var(--h4);
 }
 
-p {
-  font-size: var(--font-paragraph);
+h5 {
+  font-size: var(--h5);
 }
 
-a {
-  color: inherit;
-  font-size: var(--font-paragraph);
+small,
+.text_small {
+  font-size: var(--smallText);
 }
