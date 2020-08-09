@@ -7,7 +7,6 @@
 <style>
   main {
     position: relative;
-    padding: 0 160px;
     display: flex;
     flex-direction: column;
   }

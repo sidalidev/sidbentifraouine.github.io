@@ -1,87 +1,108 @@
 <style>
+  /* Generic */
   .separator {
-    width: 300px;
+    width: 20em;
     align-self: center;
-    margin: 120px;
   }
+
+  section {
+    margin: 8em 8em;
+  }
+
+  section > .title {
+    margin: 0 0 4em;
+  }
+
+  /* Hero Section*/
   .hero {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4em;
     align-items: center;
-    justify-content: space-evenly;
+    margin: 8em 4em;
   }
 
-  .hero .greeting {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .hero .greeting-text {
+  }
+  .hero .greeting-image {
+    width: 100%;
+  }
+
+  /* Skills Section*/
+  .skills .skill-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4em;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .skills .skill-card {
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
     height: 100%;
-  }
+    padding: 1em;
 
-  .hero .greeting img {
-    height: 160px;
-    align-self: flex-end;
-  }
-
-  /* Skills */
-  section .title {
-    margin: 0 0 32px;
-  }
-
-  .skill-list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .skill-card {
-    height: 300px;
-    width: 230px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px;
+    border: 0.1em solid var(--textColor);
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
     border-bottom-right-radius: 225px 15px;
     border-bottom-left-radius: 15px 255px;
-    border: solid 4px var(--color-black);
   }
-  .skill-card img {
-    height: 80%;
+
+  .skill-card .title {
+    vertical-align: center;
+  }
+  .skill-card .image {
+    max-width: 100%;
   }
 
   /* Tools */
-  .tool-list img {
-    height: 40px;
+  .tool-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 4em;
   }
 
-  .tool-list .row {
-    margin: 40px 0;
-    display: flex;
-    justify-content: space-around;
+  .tool-list img {
+    height: 3em;
   }
 
   /* Job */
-  .job {
-    display: flex;
-    justify-content: space-between;
+  .job .job-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     align-items: center;
-    margin: 100px 0;
-  }
-  .job.inverted {
-    flex-direction: row-reverse;
-  }
-  .job img {
-    width: 40%;
+    grid-column-gap: 2em;
+    grid-row-gap: 4em;
   }
 
-  .job .description {
-    width: 50%;
+  .job-list img {
+    max-width: 100%;
   }
-  .job .description h4 span {
+
+  .job-list h4 span {
     font-size: 0.7em;
     color: var(--color-primary);
+  }
+
+  /* Hobbies */
+  .hobbies .hobby-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 2em;
+    grid-row-gap: 4em;
+  }
+
+  .hobby-list img {
+    max-width: 100%;
   }
 
   /* Contact */
@@ -92,12 +113,12 @@
 
   .contact > a {
     padding: 16px 32px;
-    /* background-color: var(--color-secondary); */
+    background-color: var(--textColor);
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--backgroundColor);
     /* border-radius: 8px; */
     align-self: center;
-    border: 4px solid var(--color-primary);
+    border: 1px solid var(--textColor);
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
     border-bottom-right-radius: 225px 15px;
@@ -105,14 +126,14 @@
   }
 
   .social-links {
-    margin: 32px 0;
+    margin: 64px 0;
     align-self: center;
     display: flex;
     justify-content: space-between;
   }
   .social-links a {
     text-decoration: none;
-    margin: 0 8px;
+    margin: 0 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,64 +149,59 @@
 </svelte:head>
 
 <section class="hero">
-  <img alt="Sid coding" src="typing illus.png" />
-  <div class="greeting">
-    <div class="text">
-      <h1>Hi, I’m Sid</h1>
-      <h4>A Fullstack JavaScript Engineer</h4>
-    </div>
-    <img alt="Flower pot" src="flowers.png" />
+  <div class="greeting-text">
+    <h1>Hi, I’m Sid</h1>
+    <h4>A Fullstack JavaScript Engineer</h4>
   </div>
+  <img class="greeting-image" src="images/typing.svg" />
 </section>
 
-<img class="separator" src="hr_skills.png" alt="Horizontal separator" />
+<img class="separator" src="images/hr_skills.svg" />
 
-<section>
+<section class="skills">
   <h3 class="title">I know to</h3>
   <div class="skill-list">
     <div class="skill-card">
-      <img src="uxuidesign.png" alt="UX UI Design" />
-      <h4>UX/UI Design</h4>
+      <img src="images/skills_uxui.svg" class="image" />
+      <h5 class="title">UX & UI Design</h5>
     </div>
     <div class="skill-card">
-      <img src="webdev.png" alt="UX UI Design" />
-      <h4>Web Dev</h4>
+      <img src="images/skills_web.svg" class="image" />
+      <h5 class="title">Web Dev</h5>
     </div>
     <div class="skill-card">
-      <img src="mobiledev.png" alt="UX UI Design" />
-      <h4>Mobile Dev</h4>
+      <img src="images/skills_mobile.svg" class="image" />
+      <h5 class="title">Mobile Dev</h5>
     </div>
   </div>
 </section>
 
-<img class="separator" src="hr_tools.png" alt="Horizontal separator" />
+<img class="separator" src="images/hr_tools.svg" />
 
-<section>
+<section class="tools">
   <h3 class="title">My tools</h3>
   <div class="tool-list">
-    <div class="row">
-      <img src="tools/figma.png" alt="figma" />
-      <img src="tools/react.png" alt="react" />
-      <img src="tools/gatsby.png" alt="gatsby" />
-      <img src="tools/next.png" alt="next" />
-      <img src="tools/flutter.png" alt="flutter" />
-      <img src="tools/svelte.png" alt="svelte" />
-    </div>
-    <div class="row">
-      <img src="tools/node.png" alt="node" />
-      <img src="tools/express.png" alt="express" />
-      <img src="tools/apollo.png" alt="apollo" />
-      <img src="tools/prisma.png" alt="prisma" />
-    </div>
+    <img src="images/icons/figma.svg" alt="figma" />
+    <img src="images/icons/react.svg" alt="react" />
+    <img src="images/icons/gatsby.svg" alt="gatsby" />
+    <img src="images/icons/next.svg" alt="next" />
+    <img src="images/icons/flutter.svg" alt="flutter" />
+    <img src="images/icons/svelte.svg" alt="svelte" />
+    <img src="images/icons/node.svg" alt="node" />
+    <img src="images/icons/express.svg" alt="express" />
+    <img src="images/icons/apollo.svg" alt="apollo" />
+    <img src="images/icons/prisma.svg" alt="prisma" />
   </div>
 </section>
 
-<img class="separator" src="hr_job.png" alt="Horizontal separator" />
+<img class="separator" src="images/hr_skills.svg" />
 
-<section>
+<section class="job">
   <h3 class="title">My current job</h3>
-  <div class="job">
-    <img src="images/jobs/ector.png" alt="Ector" />
+
+  <div class="job-list">
+    <!-- ECTOR -->
+    <img src="images/ector.svg" alt="Ector" />
     <div class="description">
       <h4>
         <span>Fullstack Engineer at</span>
@@ -202,10 +218,8 @@
         needs of our beloved customers.
       </p>
     </div>
-  </div>
 
-  <div class="job inverted">
-    <img src="images/jobs/uphf.png" alt="UPHF" />
+    <!-- UPHF -->
     <div class="description">
       <h4>
         <span>Teacher at</span>
@@ -225,17 +239,17 @@
         with React Native, Flutter and Ionic.
       </p>
     </div>
+    <img src="images/uphf.svg" alt="UPHF" />
+
   </div>
 </section>
 
-<img class="separator" src="hr_job.png" alt="Horizontal separator" />
+<img class="separator" src="images/hr_skills.svg" />
 
-<section>
+<section class="hobbies">
   <h3 class="title">More about me</h3>
-  <div class="job">
-    <img
-      src="images/about/sport.png"
-      alt="Sketch of a Football ball and Judo belt" />
+  <div class="hobby-list">
+    <img src="images/sport.svg" alt="Sketch of a Football ball and Judo belt" />
     <div class="description">
       <h4>Sport</h4>
       <p>
@@ -249,10 +263,7 @@
         needs of our beloved customers.
       </p>
     </div>
-  </div>
 
-  <div class="job inverted">
-    <img src="images/about/pizza.png" alt="Sketch of a Pizza" />
     <div class="description">
       <h4>Learning</h4>
       <p>
@@ -265,10 +276,11 @@
       </p>
       <p>Everything that I don’t know yet attracts me…</p>
     </div>
+    <img src="images/pizza.svg" alt="Sketch of a Pizza" />
   </div>
 </section>
 
-<img class="separator" src="hr_job.png" alt="Horizontal separator" />
+<img class="separator" src="images/hr_contact.svg" />
 
 <section class="contact">
   <a href="mailto:sidbentifraouine@gmail.com?subject=Hi there 🖖!">
@@ -279,16 +291,16 @@
       rel="external"
       target="_blank"
       href="https://www.linkedin.com/in/sidbentifraouine/">
-      <img src="images/contact/linkedin.svg" alt="LinkedIn logo" />
+      <img src="images/icons/linkedin.svg" alt="LinkedIn logo" />
     </a>
     <a
       rel="external"
       target="_blank"
       href="https://github.com/sidbentifraouine">
-      <img src="images/contact/github.svg" alt="Github logo" />
+      <img src="images/icons/github.svg" alt="Github logo" />
     </a>
     <a rel="external" target="_blank" href="https://twitter.com/sbentifraouine">
-      <img src="images/contact/twitter.svg" alt="Twitter logo" />
+      <img src="images/icons/twitter.svg" alt="Twitter logo" />
     </a>
   </div>
 </section>
