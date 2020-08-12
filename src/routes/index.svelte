@@ -1,5 +1,11 @@
 <script>
-  import { intros } from "svelte/internal";
+  import { fade } from "svelte/transition";
+  import { onMount } from "svelte";
+  let visible = false;
+
+  onMount(() => {
+    visible = true;
+  });
 </script>
 
 <style>
@@ -109,7 +115,7 @@
   }
 
   .tool-list img {
-    height: 2em;
+    height: 3em;
   }
   @media screen and (max-width: 800px) {
     .tool-list img {
@@ -230,157 +236,179 @@
   <title>Sid 👨‍🎨</title>
 </svelte:head>
 
-<section class="hero">
-  <div class="greeting-text">
-    <h1>Hi, I’m Sid</h1>
-    <h4>A Fullstack JavaScript Engineer</h4>
-  </div>
-  <img class="greeting-image" src="images/typing.svg" />
-</section>
-
-<img class="separator" src="images/hr_skills.svg" />
-
-<section class="skills">
-  <h3 class="title">I know to</h3>
-  <div class="skill-list">
-    <div class="skill-card">
-      <img src="images/skills_uxui.svg" class="image" />
-      <h5 class="title">UX & UI Design</h5>
+{#if visible}
+  <section class="hero" transition:fade={{ delay: 300, duration: 500 }}>
+    <div class="greeting-text">
+      <h1>Hi, I’m Sid</h1>
+      <h4>A Fullstack JavaScript Engineer</h4>
     </div>
-    <div class="skill-card">
-      <img src="images/skills_web.svg" class="image" />
-      <h5 class="title">Web Dev</h5>
+    <img class="greeting-image" src="images/typing.svg" />
+  </section>
+
+  <img
+    class="separator"
+    src="images/hr_skills.svg"
+    transition:fade={{ delay: 300, duration: 500 }} />
+
+  <section class="skills" transition:fade={{ delay: 300, duration: 500 }}>
+    <h3 class="title">I know to</h3>
+    <div class="skill-list">
+      <div class="skill-card">
+        <img src="images/skills_uxui.svg" class="image" />
+        <h5 class="title">UX & UI Design</h5>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills_web.svg" class="image" />
+        <h5 class="title">Web Dev</h5>
+      </div>
+      <div class="skill-card">
+        <img src="images/skills_mobile.svg" class="image" />
+        <h5 class="title">Mobile Dev</h5>
+      </div>
     </div>
-    <div class="skill-card">
-      <img src="images/skills_mobile.svg" class="image" />
-      <h5 class="title">Mobile Dev</h5>
+  </section>
+
+  <img
+    class="separator"
+    src="images/hr_tools.svg"
+    transition:fade={{ delay: 300, duration: 500 }} />
+
+  <section class="tools" transition:fade={{ delay: 300, duration: 500 }}>
+    <h3 class="title">My tools</h3>
+    <div class="tool-list">
+      <img src="images/icons/figma.svg" alt="figma" />
+      <img src="images/icons/react.svg" alt="react" />
+      <img src="images/icons/gatsby.svg" alt="gatsby" />
+      <img src="images/icons/next.svg" alt="next" />
+      <img src="images/icons/flutter.svg" alt="flutter" />
+      <img src="images/icons/svelte.svg" alt="svelte" />
+      <img src="images/icons/node.svg" alt="node" />
+      <img src="images/icons/express.svg" alt="express" />
+      <img src="images/icons/apollo.svg" alt="apollo" />
+      <img src="images/icons/prisma.svg" alt="prisma" />
     </div>
-  </div>
-</section>
+  </section>
 
-<img class="separator" src="images/hr_tools.svg" />
+  <img
+    class="separator"
+    src="images/hr_skills.svg"
+    transition:fade={{ delay: 300, duration: 500 }} />
 
-<section class="tools">
-  <h3 class="title">My tools</h3>
-  <div class="tool-list">
-    <img src="images/icons/figma.svg" alt="figma" />
-    <img src="images/icons/react.svg" alt="react" />
-    <img src="images/icons/gatsby.svg" alt="gatsby" />
-    <img src="images/icons/next.svg" alt="next" />
-    <img src="images/icons/flutter.svg" alt="flutter" />
-    <img src="images/icons/svelte.svg" alt="svelte" />
-    <img src="images/icons/node.svg" alt="node" />
-    <img src="images/icons/express.svg" alt="express" />
-    <img src="images/icons/apollo.svg" alt="apollo" />
-    <img src="images/icons/prisma.svg" alt="prisma" />
-  </div>
-</section>
+  <section class="job" transition:fade={{ delay: 300, duration: 500 }}>
+    <h3 class="title">My current job</h3>
 
-<img class="separator" src="images/hr_skills.svg" />
+    <div class="job-list">
+      <!-- ECTOR -->
+      <img src="images/ector.svg" />
+      <div class="description">
+        <h4>
+          <span>Fullstack Engineer at</span>
+          ECTOR
+        </h4>
+        <p>
+          Ector is the valet parking service at train stations and airports that
+          parks your car for you. It makes you save time and save up to 50% on
+          parking !
+        </p>
+        <p>
+          I’m working with an awesome team on the developping the solutions for
+          Web with Gatsby, Mobile with React Native to make the service fit the
+          needs of our beloved customers.
+        </p>
+      </div>
 
-<section class="job">
-  <h3 class="title">My current job</h3>
+      <!-- UPHF -->
+      <img src="images/uphf.svg" />
+      <div class="description">
+        <h4>
+          <span>Teacher at</span>
+          UPHF
+        </h4>
+        <p>
+          Université Polytechnique Hauts-de-France is also the university where
+          I studied and got my Master Degree in Computer Science.
+        </p>
+        <p>
+          When I was a student, I loved how some teachers made me love a
+          specific subject. Inspired by them, I wanted to do the same thing and
+          try my best to share what know.
+        </p>
+        <p>
+          Today, I teach Master 2 students how to make Cross Platform Mobile
+          Apps with React Native, Flutter and Ionic.
+        </p>
+      </div>
 
-  <div class="job-list">
-    <!-- ECTOR -->
-    <img src="images/ector.svg" />
-    <div class="description">
-      <h4>
-        <span>Fullstack Engineer at</span>
-        ECTOR
-      </h4>
-      <p>
-        Ector is the valet parking service at train stations and airports that
-        parks your car for you. It makes you save time and save up to 50% on
-        parking !
-      </p>
-      <p>
-        I’m working with an awesome team on the developping the solutions for
-        Web with Gatsby, Mobile with React Native to make the service fit the
-        needs of our beloved customers.
-      </p>
     </div>
+  </section>
 
-    <!-- UPHF -->
-    <img src="images/uphf.svg" />
-    <div class="description">
-      <h4>
-        <span>Teacher at</span>
-        UPHF
-      </h4>
-      <p>
-        Université Polytechnique Hauts-de-France is also the university where I
-        studied and got my Master Degree in Computer Science.
-      </p>
-      <p>
-        When I was a student, I loved how some teachers made me love a specific
-        subject. Inspired by them, I wanted to do the same thing and try my best
-        to share what know.
-      </p>
-      <p>
-        Today, I teach Master 2 students how to make Cross Platform Mobile Apps
-        with React Native, Flutter and Ionic.
-      </p>
+  <img
+    class="separator"
+    src="images/hr_skills.svg"
+    transition:fade={{ delay: 300, duration: 500 }} />
+
+  <section class="hobbies" transition:fade={{ delay: 300, duration: 500 }}>
+    <h3 class="title">More about me</h3>
+    <div class="hobby-list">
+      <img
+        src="images/sport.svg"
+        alt="Sketch of a Football ball and Judo belt" />
+      <div class="description">
+        <h4>Sport</h4>
+        <p>
+          For me, Sport is one of the most important things in life, with a
+          couple of other thing, this makes me happier than ever.
+        </p>
+        <p>
+          I enjoy practicing all sports, especialy Judo, Brazilia Jiu Jitsu and
+          Judo, besides that, I'd like to learn how to surf…
+        </p>
+      </div>
+
+      <img src="images/pizza.svg" alt="Sketch of a Pizza" />
+      <div class="description">
+        <h4>Learning</h4>
+        <p>
+          It can be professional, artistic or sometimes stuff that can appear
+          useless to others… I love learning new things.
+        </p>
+        <p>
+          It can be painting, or how to prepare traditional Napolitan Pizza, or
+          how to speak Italian.
+        </p>
+        <p>Everything that I don’t know yet attracts me…</p>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <img
+    class="separator"
+    src="images/hr_contact.svg"
+    transition:fade={{ delay: 300, duration: 500 }} />
 
-<img class="separator" src="images/hr_skills.svg" />
-
-<section class="hobbies">
-  <h3 class="title">More about me</h3>
-  <div class="hobby-list">
-    <img src="images/sport.svg" alt="Sketch of a Football ball and Judo belt" />
-    <div class="description">
-      <h4>Sport</h4>
-      <p>
-        For me, Sport is one of the most important things in life, with a couple
-        of other thing, this makes me happier than ever.
-      </p>
-      <p>
-        I enjoy practicing all sports, especialy Judo, Brazilia Jiu Jitsu and
-        Judo, besides that, I'd like to learn how to surf…
-      </p>
-    </div>
-
-    <img src="images/pizza.svg" alt="Sketch of a Pizza" />
-    <div class="description">
-      <h4>Learning</h4>
-      <p>
-        It can be professional, artistic or sometimes stuff that can appear
-        useless to others… I love learning new things.
-      </p>
-      <p>
-        It can be painting, or how to prepare traditional Napolitan Pizza, or
-        how to speak Italian.
-      </p>
-      <p>Everything that I don’t know yet attracts me…</p>
-    </div>
-  </div>
-</section>
-
-<img class="separator" src="images/hr_contact.svg" />
-
-<section class="contact">
-  <a href="mailto:sidbentifraouine@gmail.com?subject=Hi there 🖖!">
-    Let's get in touch
-  </a>
-  <div class="social-links">
-    <a
-      rel="external"
-      target="_blank"
-      href="https://www.linkedin.com/in/sidbentifraouine/">
-      <img src="images/icons/linkedin.svg" alt="LinkedIn logo" />
+  <section class="contact" transition:fade={{ delay: 300, duration: 500 }}>
+    <a href="mailto:sidbentifraouine@gmail.com?subject=Hi there 🖖!">
+      Let's get in touch
     </a>
-    <a
-      rel="external"
-      target="_blank"
-      href="https://github.com/sidbentifraouine">
-      <img src="images/icons/github.svg" alt="Github logo" />
-    </a>
-    <a rel="external" target="_blank" href="https://twitter.com/sbentifraouine">
-      <img src="images/icons/twitter.svg" alt="Twitter logo" />
-    </a>
-  </div>
-</section>
+    <div class="social-links">
+      <a
+        rel="external"
+        target="_blank"
+        href="https://www.linkedin.com/in/sidbentifraouine/">
+        <img src="images/icons/linkedin.svg" alt="LinkedIn logo" />
+      </a>
+      <a
+        rel="external"
+        target="_blank"
+        href="https://github.com/sidbentifraouine">
+        <img src="images/icons/github.svg" alt="Github logo" />
+      </a>
+      <a
+        rel="external"
+        target="_blank"
+        href="https://twitter.com/sbentifraouine">
+        <img src="images/icons/twitter.svg" alt="Twitter logo" />
+      </a>
+    </div>
+  </section>
+{/if}
