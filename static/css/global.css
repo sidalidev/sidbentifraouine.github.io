@@ -22,18 +22,19 @@
   --h3: 1.953em;
   --h4: 1.563em;
   --h5: 1.25em;
+  --paragraph: 1.1em;
   --smallText: 0.8em;
 }
 @media screen and (max-width: 800px) {
   :root {
-    --smallText: 0.7em;
+    --paragraph: 0.9em;
   }
 }
 
 body {
   background-color: var(--backgroundColor);
   font-family: var(--bodyFont);
-  font-size: var(--smallText);
+  font-size: var(--paragraph);
   line-height: 1.65;
   color: var(--textColor);
 }

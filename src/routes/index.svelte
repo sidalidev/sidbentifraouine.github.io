@@ -6,12 +6,12 @@
   }
 
   section {
-    padding: 8em 8em;
+    margin: 8em 8em;
   }
 
   @media screen and (max-width: 800px) {
     section {
-      padding: 4em 4em;
+      margin: 4em 4em;
     }
   }
 
@@ -25,13 +25,14 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 4em;
     align-items: center;
-    padding: 8em 4em;
+    margin: 8em 6em;
   }
 
   @media screen and (max-width: 800px) {
     .hero {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
+      margin: 8em 2em;
     }
     .hero .greeting-text {
       text-align: center;
