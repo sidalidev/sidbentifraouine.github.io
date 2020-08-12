@@ -22,7 +22,7 @@
   --h3: 1.953em;
   --h4: 1.563em;
   --h5: 1.25em;
-  --paragraph: 1.1em;
+  --paragraph: 1em;
   --smallText: 0.8em;
 }
 @media screen and (max-width: 800px) {

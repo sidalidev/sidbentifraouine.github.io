@@ -1,12 +1,18 @@
+<script>
+  import { intros } from "svelte/internal";
+</script>
+
 <style>
   /* Generic */
   .separator {
     width: 20em;
+    max-width: 80vw;
     align-self: center;
+    margin: 5em 0;
   }
 
   section {
-    margin: 8em 8em;
+    margin: 10em 10em;
   }
 
   @media screen and (max-width: 800px) {
@@ -25,7 +31,8 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 4em;
     align-items: center;
-    margin: 8em 6em;
+    justify-items: center;
+    margin: 8em 4em;
   }
 
   @media screen and (max-width: 800px) {
@@ -87,17 +94,27 @@
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     align-items: center;
-    grid-gap: 4em;
+    grid-gap: 3em;
   }
-
+  @media screen and (max-width: 1000px) {
+    .tool-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
   @media screen and (max-width: 800px) {
     .tool-list {
       grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2em;
     }
   }
 
   .tool-list img {
-    height: 3em;
+    height: 2em;
+  }
+  @media screen and (max-width: 800px) {
+    .tool-list img {
+      height: 2em;
+    }
   }
 
   /* Job */
@@ -318,14 +335,12 @@
     <div class="description">
       <h4>Sport</h4>
       <p>
-        Ector is the valet parking service at train stations and airports that
-        parks your car for you. It makes you save time and save up to 50% on
-        parking !
+        For me, Sport is one of the most important things in life, with a couple
+        of other thing, this makes me happier than ever.
       </p>
       <p>
-        I’m working with an awesome team on the developping the solutions for
-        Web with Gatsby, Mobile with React Native to make the service fit the
-        needs of our beloved customers.
+        I enjoy practicing all sports, especialy Judo, Brazilia Jiu Jitsu and
+        Judo, besides that, I'd like to learn how to surf…
       </p>
     </div>
 
