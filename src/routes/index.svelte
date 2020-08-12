@@ -6,7 +6,13 @@
   }
 
   section {
-    margin: 8em 8em;
+    padding: 8em 8em;
+  }
+
+  @media screen and (max-width: 800px) {
+    section {
+      padding: 4em 4em;
+    }
   }
 
   section > .title {
@@ -19,11 +25,19 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 4em;
     align-items: center;
-    margin: 8em 4em;
+    padding: 8em 4em;
   }
 
-  .hero .greeting-text {
+  @media screen and (max-width: 800px) {
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+    .hero .greeting-text {
+      text-align: center;
+    }
   }
+
   .hero .greeting-image {
     width: 100%;
   }
@@ -35,6 +49,13 @@
     grid-gap: 4em;
     justify-items: center;
     align-items: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    .skills .skill-list {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3, auto);
+    }
   }
 
   .skills .skill-card {
@@ -68,18 +89,43 @@
     grid-gap: 4em;
   }
 
+  @media screen and (max-width: 800px) {
+    .tool-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   .tool-list img {
     height: 3em;
   }
 
   /* Job */
+  .job .job-list > :nth-child(1) {
+    grid-area: ector-illustration;
+  }
+  .job .job-list > :nth-child(2) {
+    grid-area: ector-title;
+  }
+  .job .job-list > :nth-child(3) {
+    grid-area: uphf-illustration;
+  }
+  .job .job-list > :nth-child(4) {
+    grid-area: uphf-title;
+  }
+
   .job .job-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "ector-illustration ector-title" "uphf-title uphf-illustration";
     justify-items: center;
     align-items: center;
     grid-column-gap: 2em;
     grid-row-gap: 4em;
+  }
+
+  @media screen and (max-width: 800px) {
+    .job .job-list {
+      grid-template-areas: "ector-illustration" "ector-title" "uphf-illustration" "uphf-title";
+    }
   }
 
   .job-list img {
@@ -92,13 +138,31 @@
   }
 
   /* Hobbies */
+  .hobbies .hobby-list > :nth-child(1) {
+    grid-area: sport-illustration;
+  }
+  .hobbies .hobby-list > :nth-child(2) {
+    grid-area: sport-title;
+  }
+  .hobbies .hobby-list > :nth-child(3) {
+    grid-area: learning-illustration;
+  }
+  .hobbies .hobby-list > :nth-child(4) {
+    grid-area: learning-title;
+  }
+
   .hobbies .hobby-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "sport-illustration sport-title" "learning-title learning-illustration";
     justify-items: center;
     align-items: center;
     grid-column-gap: 2em;
     grid-row-gap: 4em;
+  }
+  @media screen and (max-width: 800px) {
+    .hobbies .hobby-list {
+      grid-template-areas: "sport-illustration" "sport-title" "learning-illustration" "learning-title";
+    }
   }
 
   .hobby-list img {
@@ -112,7 +176,7 @@
   }
 
   .contact > a {
-    padding: 16px 32px;
+    padding: 1em;
     background-color: var(--textColor);
     text-decoration: none;
     color: var(--backgroundColor);
@@ -126,21 +190,21 @@
   }
 
   .social-links {
-    margin: 64px 0;
+    margin: 4em 0;
     align-self: center;
     display: flex;
     justify-content: space-between;
   }
   .social-links a {
     text-decoration: none;
-    margin: 0 16px;
+    margin: 0 2em;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .social-links a img {
-    height: 32px;
+    height: 2.5em;
   }
 </style>
 
@@ -201,7 +265,7 @@
 
   <div class="job-list">
     <!-- ECTOR -->
-    <img src="images/ector.svg" alt="Ector" />
+    <img src="images/ector.svg" />
     <div class="description">
       <h4>
         <span>Fullstack Engineer at</span>
@@ -220,6 +284,7 @@
     </div>
 
     <!-- UPHF -->
+    <img src="images/uphf.svg" />
     <div class="description">
       <h4>
         <span>Teacher at</span>
@@ -239,7 +304,6 @@
         with React Native, Flutter and Ionic.
       </p>
     </div>
-    <img src="images/uphf.svg" alt="UPHF" />
 
   </div>
 </section>
@@ -264,6 +328,7 @@
       </p>
     </div>
 
+    <img src="images/pizza.svg" alt="Sketch of a Pizza" />
     <div class="description">
       <h4>Learning</h4>
       <p>
@@ -276,7 +341,6 @@
       </p>
       <p>Everything that I don’t know yet attracts me…</p>
     </div>
-    <img src="images/pizza.svg" alt="Sketch of a Pizza" />
   </div>
 </section>
 

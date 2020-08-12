@@ -4,13 +4,15 @@
 
 <style>
   nav {
-    padding: 2em 10em;
-    display: flex;
+    display: grid;
     align-items: center;
+    justify-items: center;
+    width: 100%;
   }
 
   .logo {
     height: 4em;
+    padding: 2em;
   }
 </style>
 
