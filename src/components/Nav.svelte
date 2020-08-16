@@ -20,5 +20,5 @@
   <img
     class="logo"
     src="images/logo.svg"
-    alt="Logo, handwritten Sid with a hat above the S" />
+    alt="Illustration used as a logo, handwritten Sid with a beret above the S" />
 </nav>

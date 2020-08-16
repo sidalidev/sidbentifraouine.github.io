@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "sidbentifraouine",
+  "description": "Sid Bentifraouine's Website",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

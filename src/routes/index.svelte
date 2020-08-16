@@ -234,6 +234,9 @@
 
 <svelte:head>
   <title>Sid 👨‍🎨</title>
+  <meta
+    name="description"
+    content="Welcome to Sid's website, a Simple Fullstack JavaScript Engineer" />
 </svelte:head>
 
 {#if visible}
@@ -242,27 +245,48 @@
       <h1>Hi, I’m Sid</h1>
       <h4>A Fullstack JavaScript Engineer</h4>
     </div>
-    <img class="greeting-image" src="images/typing.svg" />
+    <img
+      class="greeting-image"
+      src="images/typing.svg"
+      alt="Illustration of me, from side view while I'm working with my laptop
+      sat down on my desktop, by my side there are my glasses and a cup of
+      coffee." />
   </section>
 
   <img
     class="separator"
     src="images/hr_skills.svg"
+    alt="Illustration that works an horizontal separator between the previous
+    section and the next one, it represents desk furniture: a chair, a flower
+    pot…etc…"
     transition:fade={{ delay: 300, duration: 500 }} />
 
   <section class="skills" transition:fade={{ delay: 300, duration: 500 }}>
     <h3 class="title">I know to</h3>
     <div class="skill-list">
       <div class="skill-card">
-        <img src="images/skills_uxui.svg" class="image" />
+        <img
+          src="images/skills_uxui.svg"
+          class="image"
+          alt="Illustration representing User Interface and User Experience
+          conception: a mobile phone with interactions represented by
+          entering/exiting arrows" />
         <h5 class="title">UX & UI Design</h5>
       </div>
       <div class="skill-card">
-        <img src="images/skills_web.svg" class="image" />
+        <img
+          src="images/skills_web.svg"
+          class="image"
+          alt="Illustration representing a website in a desktop browser with
+          abstracted elements" />
         <h5 class="title">Web Dev</h5>
       </div>
       <div class="skill-card">
-        <img src="images/skills_mobile.svg" class="image" />
+        <img
+          src="images/skills_mobile.svg"
+          class="image"
+          alt="Illustration representing a smartphone application with
+          abstracted elements" />
         <h5 class="title">Mobile Dev</h5>
       </div>
     </div>
@@ -271,27 +295,56 @@
   <img
     class="separator"
     src="images/hr_tools.svg"
+    alt="Illustration that serves as a horizontal separator, it represents
+    tooling: a nut, a wrench"
     transition:fade={{ delay: 300, duration: 500 }} />
 
   <section class="tools" transition:fade={{ delay: 300, duration: 500 }}>
     <h3 class="title">My tools</h3>
     <div class="tool-list">
-      <img src="images/icons/figma.svg" alt="figma" />
-      <img src="images/icons/react.svg" alt="react" />
-      <img src="images/icons/gatsby.svg" alt="gatsby" />
-      <img src="images/icons/next.svg" alt="next" />
-      <img src="images/icons/flutter.svg" alt="flutter" />
-      <img src="images/icons/svelte.svg" alt="svelte" />
-      <img src="images/icons/node.svg" alt="node" />
-      <img src="images/icons/express.svg" alt="express" />
-      <img src="images/icons/apollo.svg" alt="apollo" />
-      <img src="images/icons/prisma.svg" alt="prisma" />
+      <img
+        src="images/icons/figma.svg"
+        alt="Figma application logo, used for designing apps" />
+      <img
+        src="images/icons/react.svg"
+        alt="React framework logo, used for building web and native apps" />
+      <img
+        src="images/icons/gatsby.svg"
+        alt="Gatsby framework logo, used to build static websites" />
+      <img
+        src="images/icons/next.svg"
+        alt="Next JS framework logo, used to build server-side rendered and
+        static websites" />
+      <img
+        src="images/icons/flutter.svg"
+        alt="Flutter framework logo, used to build mostly mobile apps, but can
+        do web also" />
+      <img
+        src="images/icons/svelte.svg"
+        alt="Svelte framework logo, used to build very fast and light web apps" />
+      <img
+        src="images/icons/node.svg"
+        alt="Node JS logo, used for everything today, mostly for server apps" />
+      <img
+        src="images/icons/express.svg"
+        alt="Express library logo, works with Node JS to build server apps" />
+      <img
+        src="images/icons/apollo.svg"
+        alt="Apollo library logo, used to help us work with GraphQL both on
+        client and server" />
+      <img
+        src="images/icons/prisma.svg"
+        alt="Prisma ORM on steroid logo, as I said, it's an ORM on steroids" />
     </div>
   </section>
 
+  <!-- TODO add the correct illustration and alt -->
   <img
     class="separator"
     src="images/hr_skills.svg"
+    alt="Illustration that works an horizontal separator between the previous
+    section and the next one, it represents desk furniture: a chair, a flower
+    pot"
     transition:fade={{ delay: 300, duration: 500 }} />
 
   <section class="job" transition:fade={{ delay: 300, duration: 500 }}>
@@ -299,12 +352,12 @@
 
     <div class="job-list">
       <!-- ECTOR -->
-      <img src="images/ector.svg" />
+      <img
+        src="images/ector.svg"
+        alt="Illustration representing me with an Ector jacket, the company that
+        I work for, it's face side viw and I wear a beret, and I'm smiling" />
       <div class="description">
-        <h4>
-          <span>Fullstack Engineer at</span>
-          ECTOR
-        </h4>
+        <h4><span>Fullstack Engineer at</span> ECTOR</h4>
         <p>
           Ector is the valet parking service at train stations and airports that
           parks your car for you. It makes you save time and save up to 50% on
@@ -318,12 +371,12 @@
       </div>
 
       <!-- UPHF -->
-      <img src="images/uphf.svg" />
+      <img
+        src="images/uphf.svg"
+        alt="Illustration of a handwritten text with a beret on top of the S:
+        Learn with Sid" />
       <div class="description">
-        <h4>
-          <span>Teacher at</span>
-          UPHF
-        </h4>
+        <h4><span>Teacher at</span> UPHF</h4>
         <p>
           Université Polytechnique Hauts-de-France is also the university where
           I studied and got my Master Degree in Computer Science.
@@ -338,13 +391,16 @@
           Apps with React Native, Flutter and Ionic.
         </p>
       </div>
-
     </div>
   </section>
 
+  <!-- TODO add the correct illustration and alt -->
   <img
     class="separator"
     src="images/hr_skills.svg"
+    alt="Illustration that works an horizontal separator between the previous
+    section and the next one, it represents desk furniture: a chair, a flower
+    pot and stuff"
     transition:fade={{ delay: 300, duration: 500 }} />
 
   <section class="hobbies" transition:fade={{ delay: 300, duration: 500 }}>
@@ -357,11 +413,16 @@
         <h4>Sport</h4>
         <p>
           For me, Sport is one of the most important things in life, with a
-          couple of other thing, this makes me happier than ever.
+          couple of other thing, this makes me happier than ever. Here is
+          <a
+            rel="external"
+            target="_blank"
+            href="https://www.youtube.com/watch?v=DsVzKCk066g">why</a>
+          you must practice sport everyday of your life.
         </p>
         <p>
-          I enjoy practicing all sports, especialy Judo, Brazilia Jiu Jitsu and
-          Judo, besides that, I'd like to learn how to surf…
+          I enjoy practicing all sports, especially Football, Cycling, Brazilian
+          Jiu Jitsu and Judo, besides that, I'd like to learn how to Surf…
         </p>
       </div>
 
@@ -373,7 +434,7 @@
           useless to others… I love learning new things.
         </p>
         <p>
-          It can be painting, or how to prepare traditional Napolitan Pizza, or
+          It can be painting, or how to prepare traditional Neapolitan Pizza, or
           how to speak Italian.
         </p>
         <p>Everything that I don’t know yet attracts me…</p>
@@ -384,6 +445,8 @@
   <img
     class="separator"
     src="images/hr_contact.svg"
+    alt="Illustration representing an horizontal separator that represents
+    contact items: an envelope"
     transition:fade={{ delay: 300, duration: 500 }} />
 
   <section class="contact" transition:fade={{ delay: 300, duration: 500 }}>
