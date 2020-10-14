@@ -1,0 +1,24 @@
+@font-face {
+  font-family: MalloryThin;
+  src: url("../fonts/Mallory_Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: MalloryBook;
+  src: url("../fonts/Mallory_Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: MalloryMedium;
+  src: url("../fonts/Mallory_Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: MalloryBold;
+  src: url("../fonts/Mallory_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: MalloryUltra;
+  src: url("../fonts/Mallory_Ultra.ttf") format("truetype");
+}
